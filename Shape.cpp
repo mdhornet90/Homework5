@@ -1,5 +1,6 @@
 #include "Shape.h"
-using namespace std
+#include <iostream>
+using namespace std;
 
 Shape::Shape( const string &color ): shapeColor( color )
 {

@@ -1,6 +1,7 @@
 #include "Square.h"
 #include <iomanip>
 #include <iostream>
+using namespace std;
 
 Square::Square(const string& color, double length) : Shape(color) : length(sideLength)
 {
