@@ -3,7 +3,8 @@
 #include <string>
 using namespace std;
 
-Shape::Shape( const string &color ) : shapeColor( color )
+Shape::Shape( const string &color ) 
+	: shapeColor( color )
 {
 	
 }

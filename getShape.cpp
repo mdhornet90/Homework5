@@ -17,7 +17,7 @@ Shape* getShape()
 	if (!strcasecmp(color.c_str(),"done"))
 		return NULL;
 	else
-		cin >> temp.shapeColor;
+		cin >> color;
 		
 	cout << "Enter the shape type";
 	cin >> shape;
