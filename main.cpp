@@ -1,5 +1,4 @@
 #include "Shape.h"
-#include "getShape.cpp"
 #include <iostream>
 #include <iomanip>
 #include <string>
@@ -10,16 +9,30 @@ Shape* getShape();
 int main (void)
 {
 	Shape *shapes[10];
-	int i;
+	int i = -1;
 	
-	for ( i = 0 ; shapes[i] != NULL && i < 10; i++ )
+	while (shapes[i] != NULL && i < 10)
+	{
+		i++;
 		shapes[i] = getShape();
+	}
 	
-	for ( i = 0 ; shapes[i] != NULL && i < 10; i++ )
+	i = 0;
+	while (shapes[i] != NULL)
+	{
 		cout << shapes[i]->toString() << endl;
+		i++;
+	}
 	
-	for ( i = 0 ; i < 10; i++ )
+	i = 0;
+	
+	while (shapes[i] != NULL)
+	{
 		delete shapes[i];
-		
+		i++;
+	}
+	
+	cout << "\n...Completed" << endl;
+	
 	return 0;
 }

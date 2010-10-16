@@ -76,5 +76,9 @@
     <File Name="Square.cpp"/>
     <File Name="Square.h"/>
     <File Name="main.cpp"/>
+    <File Name="Circle.h"/>
+    <File Name="Circle.cpp"/>
+    <File Name="Rectangle.cpp"/>
+    <File Name="Rectangle.h"/>
   </VirtualDirectory>
 </CodeLite_Project>

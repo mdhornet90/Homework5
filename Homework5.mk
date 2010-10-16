@@ -48,7 +48,7 @@ LibPath                := "$(LibraryPathSwitch)."
 ## User defined environment variables
 ##
 CodeLiteDir:=/usr/share/codelite
-Objects=$(IntermediateDirectory)/getShape$(ObjectSuffix) $(IntermediateDirectory)/Shape$(ObjectSuffix) $(IntermediateDirectory)/Square$(ObjectSuffix) $(IntermediateDirectory)/main$(ObjectSuffix) 
+Objects=$(IntermediateDirectory)/getShape$(ObjectSuffix) $(IntermediateDirectory)/Shape$(ObjectSuffix) $(IntermediateDirectory)/Square$(ObjectSuffix) $(IntermediateDirectory)/main$(ObjectSuffix) $(IntermediateDirectory)/Circle$(ObjectSuffix) $(IntermediateDirectory)/Rectangle$(ObjectSuffix) 
 
 ##
 ## Main Build Targets 
@@ -100,6 +100,22 @@ $(IntermediateDirectory)/main$(DependSuffix): main.cpp
 $(IntermediateDirectory)/main$(PreprocessSuffix): main.cpp
 	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main$(PreprocessSuffix) "/home/vu42438/Desktop/Programming/Cpp/Homework5/main.cpp"
 
+$(IntermediateDirectory)/Circle$(ObjectSuffix): Circle.cpp $(IntermediateDirectory)/Circle$(DependSuffix)
+	$(CompilerName) $(SourceSwitch) "/home/vu42438/Desktop/Programming/Cpp/Homework5/Circle.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Circle$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Circle$(DependSuffix): Circle.cpp
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Circle$(ObjectSuffix) -MF$(IntermediateDirectory)/Circle$(DependSuffix) -MM "/home/vu42438/Desktop/Programming/Cpp/Homework5/Circle.cpp"
+
+$(IntermediateDirectory)/Circle$(PreprocessSuffix): Circle.cpp
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Circle$(PreprocessSuffix) "/home/vu42438/Desktop/Programming/Cpp/Homework5/Circle.cpp"
+
+$(IntermediateDirectory)/Rectangle$(ObjectSuffix): Rectangle.cpp $(IntermediateDirectory)/Rectangle$(DependSuffix)
+	$(CompilerName) $(SourceSwitch) "/home/vu42438/Desktop/Programming/Cpp/Homework5/Rectangle.cpp" $(CmpOptions) $(ObjectSwitch)$(IntermediateDirectory)/Rectangle$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Rectangle$(DependSuffix): Rectangle.cpp
+	@$(CompilerName) $(CmpOptions) $(IncludePath) -MT$(IntermediateDirectory)/Rectangle$(ObjectSuffix) -MF$(IntermediateDirectory)/Rectangle$(DependSuffix) -MM "/home/vu42438/Desktop/Programming/Cpp/Homework5/Rectangle.cpp"
+
+$(IntermediateDirectory)/Rectangle$(PreprocessSuffix): Rectangle.cpp
+	@$(CompilerName) $(CmpOptions) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Rectangle$(PreprocessSuffix) "/home/vu42438/Desktop/Programming/Cpp/Homework5/Rectangle.cpp"
+
 
 -include $(IntermediateDirectory)/*$(DependSuffix)
 ##
@@ -118,6 +134,12 @@ clean:
 	$(RM) $(IntermediateDirectory)/main$(ObjectSuffix)
 	$(RM) $(IntermediateDirectory)/main$(DependSuffix)
 	$(RM) $(IntermediateDirectory)/main$(PreprocessSuffix)
+	$(RM) $(IntermediateDirectory)/Circle$(ObjectSuffix)
+	$(RM) $(IntermediateDirectory)/Circle$(DependSuffix)
+	$(RM) $(IntermediateDirectory)/Circle$(PreprocessSuffix)
+	$(RM) $(IntermediateDirectory)/Rectangle$(ObjectSuffix)
+	$(RM) $(IntermediateDirectory)/Rectangle$(DependSuffix)
+	$(RM) $(IntermediateDirectory)/Rectangle$(PreprocessSuffix)
 	$(RM) $(OutputFile)
 
 

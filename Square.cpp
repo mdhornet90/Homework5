@@ -20,7 +20,7 @@ string Square::toString() const
 	ostringstream oss;
 	string myString;
 	
-	oss << getColor() << "square with side length of " << sideLength << " and area of " << area();
+	oss << getColor() << " square with side length of " << sideLength << " and area of " << area();
 	
 	myString = oss.str();
 	
