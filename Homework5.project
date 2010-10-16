@@ -75,5 +75,6 @@
     <File Name="Shape.h"/>
     <File Name="Square.cpp"/>
     <File Name="Square.h"/>
+    <File Name="main.cpp"/>
   </VirtualDirectory>
 </CodeLite_Project>

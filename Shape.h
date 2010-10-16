@@ -17,3 +17,5 @@ class Shape
 	private:
 		string shapeColor;
 }
+
+#endif
