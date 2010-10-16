@@ -15,6 +15,6 @@ class Square : public Shape
 		virtual string toString() const;
 	private:
 		double sideLength;
-}
+};
 
 #endif

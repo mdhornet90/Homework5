@@ -18,6 +18,6 @@ class Shape
 		virtual string toString() const = 0;
 	private:
 		string shapeColor;
-}
+};
 
 #endif

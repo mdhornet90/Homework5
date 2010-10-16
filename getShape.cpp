@@ -8,23 +8,26 @@ using namespace std;
 
 string color;
 double sideLength;
+string shape;
+Square *temp;
 
 Shape* getShape()
 {
-	while ( !strcasecmp(cin,"done") )
-	{
-		cout << "Enter the color (or done)";
-		cin >> shapeColor;
+	cout << "Enter shape color (or 'done')";
+	if (!strcasecmp(color.c_str(),"done"))
+		return NULL;
+	else
+		cin >> temp.shapeColor;
 		
-		cout << "Enter the shape type";
-		if (!strcasecmp(shape,"square"))
-		{
-			cout << "Enter the length of a side";
-			cin >> sideLength;
+	cout << "Enter the shape type";
+	cin >> shape;
+	if (!strcasecmp(shape.c_str(),"square"))
+	{
+		cout << "Enter the length of a side";
+		cin >> sideLength;
 			
-			new Square(color, sideLength);
-		}
+		temp = new Square(color, sideLength);
 	}
 	
-	return &shapes;
+	return temp;
 }
