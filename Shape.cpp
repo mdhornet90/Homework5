@@ -1,12 +1,12 @@
 #include "Shape.h"
-using namespace std;
+using namespace std
 
 Shape::Shape( const string &color ): shapeColor( color )
 {
 	
 }
 
-Shape::string getColor() const
+string Shape::getColor() const
 {
 	return shapeColor;
 }

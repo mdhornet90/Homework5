@@ -1,6 +1,7 @@
 #ifndef SHAPE_H
 #define SHAPE_H
 
+#include <string.h>
 #include <string>
 using namespace std;
 
