@@ -6,13 +6,13 @@
 
 using namespace std;
 
-string color;
-double sideLength;
-string shape;
-Square *temp;
-
 Shape* getShape()
 {
+	string color;
+	double sideLength;
+	string shape;
+	Square *temp;
+	
 	cout << "Enter shape color (or 'done')";
 	if (!strcasecmp(color.c_str(),"done"))
 		return NULL;
