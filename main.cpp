@@ -13,25 +13,26 @@ int main (void)
 	int j = 0;
 	Shape *temp;
 	
-	while (shapes[i] != NULL && i < 10)
-	{
+	while (shapes[i] != NULL && i < 10) //Using this method, shapes[i] starts off as zero,
+	{                                   //and can then be tested back up in the evaluation.
 		i++;
 		shapes[i] = getShape();
 	}
 	
 	i = 0;
 	cout << fixed << setprecision( 2 );
+	cout << "Printing shape data...\n" << endl;
 	while (shapes[i] != NULL)
 	{
 		cout << shapes[i]->toString() << endl;
 		i++;
 	}
 	
-	cout << "arranging output by area in ascending order..." << endl;
+	cout << "\nArranging output by area in ascending order...\n" << endl;
 	for ( i = 0; shapes[i] != NULL; i++)
-		for ( j = 0; shapes[j] != NULL; j++)
+		for ( j = 0; j <= i; j++)
 		{
-			if ( shapes[j]->area() < shapes[i]->area())
+			if ( shapes[j]->area() > shapes[i]->area()) //Simple sort algorithm
 			{
 				temp = shapes[j];
 				shapes[j] = shapes[i];
@@ -53,7 +54,7 @@ int main (void)
 		i++;
 	}
 	
-	cout << "\n...Completed" << endl;
+	cout << "\n...Completed\n" << endl;
 	
 	return 0;
 }

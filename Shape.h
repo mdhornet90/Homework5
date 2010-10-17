@@ -13,7 +13,7 @@ class Shape
 		
 		string getColor() const;
 		
-		virtual double area() const = 0;
+		virtual double area() const = 0;   //Now an abstract class
 		
 		virtual string toString() const = 0;
 	private:

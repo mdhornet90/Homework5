@@ -36,7 +36,7 @@ Shape* getShape()
 		cout << "Please enter a shape (square, circle, or rectangle): ";
 		cin >> shape;
 	}
-	if (!strcasecmp(shape.c_str(),"square"))
+	if (!strcasecmp(shape.c_str(),"square"))   //Prompt and virtual function used dependent on type of shape
 	{
 		cout << "Enter the length of a side: ";
 		cin >> sideLength;
