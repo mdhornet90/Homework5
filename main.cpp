@@ -33,9 +33,9 @@ int main (void)
 		{
 			if ( shapes[j]->area() < shapes[i]->area())
 			{
-				temp = shapes[i];
-				shapes[i] = shapes[j];
-				shapes[j] = temp;
+				temp = shapes[j];
+				shapes[j] = shapes[i];
+				shapes[i] = temp;
 			}
 		}
 		
