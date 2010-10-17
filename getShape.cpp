@@ -56,7 +56,7 @@ Shape* getShape()
 	{
 		cout << "Enter the length: ";
 		cin >> length;
-		cout << "\nEnter the width: ";
+		cout << "Enter the width: ";
 		cin >> width;
 		
 		temp = new Rectangle(color, length, width);
